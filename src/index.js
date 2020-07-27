@@ -4,8 +4,11 @@ import './index.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import AppPresent from './selectCharacter/AppPresent';
+
 
 ReactDOM.render(
+  // <AppPresent />
   
     <App />
   , 
@@ -17,3 +20,7 @@ ReactDOM.render(
 // Learn more about service workers: https://bit.ly/CRA-PWA
 serviceWorker.unregister();
 //<React.StrictMode></React.StrictMode>
+
+
+// AppPresent : selectCharacter
+// App : terfs vs pikachu

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Pikachu from './Pikachu';
 import JkRowling from './JkRowling';
-import jsonTweets from './selectCharacter/tweets.json';
+import jsonTweets from './tweets.json';
 
 
 class App extends Component {
@@ -23,6 +23,12 @@ class App extends Component {
     return Math.floor(Math.random() * (jsonTweets.pikachu.length - 1));
   }
 
+  kill = () => {
+    this.setState({
+      jkrowling: 0
+    })
+  }
+
   reduceLife = (param) => {
     if (param === 'Pikachu') {
       this.setState({
@@ -41,12 +47,12 @@ class App extends Component {
   render() {
 
     return (
-      <div className="container text-center">
-        <h1>Les Terfs vs Pikachu</h1>
+      <div className="app-div container text-center">
+        <h1>Terfs vs Pikachu</h1>
         <hr />
         <div className="row">
-          <JkRowling jktweet={this.state.jkTweet} name='"dire un truc transphobe"' life={this.state.jkrowling} reduceHandler={this.reduceLife} />
-          <Pikachu pikatweet={this.state.pikachuTweet} defenseName="Self-care" name='"tonnerre"' life={this.state.pikachu} reduceHandler={this.reduceLife} />
+          <JkRowling handleKill={this.kill} jktweet={this.state.jkTweet} name='"Say Transphobic Bullshit"' life={this.state.jkrowling} reduceHandler={this.reduceLife} />
+          <Pikachu pikatweet={this.state.pikachuTweet} defenseName="Self-care" name='"Thunder"' life={this.state.pikachu} reduceHandler={this.reduceLife} />
         </div>
       </div>
     );
@@ -60,8 +66,11 @@ export default App;
 
 ////// MAP ROAD : 
 
-// 2. Quand la vie de JK passe sous les 20pv, faire apparaître un btn "Chercher du soutien auprès de Steven King"
-//    Si on clique dessus : JK est K.O 
+// 4. Ajouter un * : "source : JK Rowling's twitter account".
+
+// 5. Améliorer l'affichage des tweets (réduire la place occuper par le tableau ?) 
+
+// 6. Pb : Le bouton "trans women are women too" Apparait même quand pikachu fait le K.O
 
 
 
@@ -85,6 +94,12 @@ export default App;
 // Defense JK :
 
 
+// A FAIRE QUAND J'AURAIS LE SKILL :
+// 3. Ajouter des petits effets d'animations 
+// persos qui clignotent quand attaqué, perso qui s'avance pour attaquer, DURE À FAIRE POUR L'INSTANT
+
+
+
 
 
 // DONE : 
@@ -98,3 +113,11 @@ export default App;
   //   randomNumb = () => {
   //     return Math.floor(Math.random() * (jsonQuotes.quotes.length - 1));
   // }
+
+
+
+// 2. Quand la vie de JK passe sous les 20pv, faire apparaître un btn "Chercher du soutien auprès de Steven King"
+//    Si on clique dessus : JK est K.O 
+
+
+// 3. jkrowlng qui disparait de plus en plus

@@ -5,7 +5,7 @@ const countHits = (WrappedComponent) => {
     class CountHits extends Component {
 
         state = {
-            hits: 0
+            hits: 0,
         }
 
         addOne = () => {

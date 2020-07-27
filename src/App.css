@@ -1,0 +1,52 @@
+.app-div {
+    max-height: 100vh;
+    margin: 10px auto;
+}
+
+.jk-tweet, .pika-tweet {
+    display: flex;
+    height: 80px;
+    overflow: scroll;
+    border: double black;
+    padding: 3px;
+    font-family: 'Courier Prime', monospace;
+}
+
+.jk-tweet span, .pika-tweet span {
+    display: block;
+    margin: auto;
+    padding: 0 10px;
+}
+
+.error {
+    display: flex;
+}
+.error p {
+    color: #fff;
+    font-size: 20px;
+    margin: auto;
+}
+
+/* .ko-animation-origin {
+    transition-property: transform;
+    transition-duration: 1s;
+    transition-timing-function: ease;
+} */
+
+.ko-animation-origin {
+    opacity: 1;
+    transition: transform 1s, opacity 0.5s ease;
+}
+
+.ko-animation {
+    transform: translateY(400px);
+    opacity: 0;
+}
+#btn-fixed {
+    margin: auto;
+    align-items: center;
+}
+
+.blink-class {
+    transition: transform 1s, opacity 0.5s ease-in;
+}
