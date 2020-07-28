@@ -23,6 +23,7 @@ class App extends Component {
     return Math.floor(Math.random() * (jsonTweets.pikachu.length - 1));
   }
 
+
   kill = () => {
     this.setState({
       jkrowling: 0
@@ -44,16 +45,36 @@ class App extends Component {
     }
   }
 
+
   render() {
+    const { pikachu, jkrowling, jkTweet, pikachuTweet } = this.state;
 
     return (
       <div className="app-div container text-center">
         <h1>Terfs vs Pikachu</h1>
         <hr />
         <div className="row">
-          <JkRowling handleKill={this.kill} jktweet={this.state.jkTweet} name='"Say Transphobic Bullshit"' life={this.state.jkrowling} reduceHandler={this.reduceLife} />
-          <Pikachu pikatweet={this.state.pikachuTweet} defenseName="Self-care" name='"Thunder"' life={this.state.pikachu} reduceHandler={this.reduceLife} />
+          <JkRowling  handleKill={this.kill} jktweet={jkTweet} name='"Say Transphobic Bullshit"' life={jkrowling} reduceHandler={this.reduceLife} />
+          <Pikachu pikatweet={pikachuTweet} defenseName="Self-care" name='"Thunder"' life={pikachu} reduceHandler={this.reduceLife} />
         </div>
+
+        <footer>
+
+          <div className="container-fluid">
+            <div className="row d-flex">
+              <div className="col-lg-4 col-md-4 elem">*All tweets are from JK Rowling's account.</div>
+              <div className="col-lg-4 col-md-4 elem">© 2020 Shay Reichert</div>
+              <div id="logos" className="col-lg-4 col-md-4 elem">
+                <a href="mailto:shay.reichert@outlook.fr"><i class="fas fa-at fa-2x"></i></a>
+                <a href="https://twitter.com/ShayReichert" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter-square fa-2x"></i></a>
+                <a href="https://github.com/ShayReichert" target="_blank" rel="noopener noreferrer"><i class="fab fa-github fa-2x"></i></a>
+              </div>
+            </div>
+          </div>
+
+        </footer>
+
+
       </div>
     );
   }
@@ -66,9 +87,6 @@ export default App;
 
 ////// MAP ROAD : 
 
-// 4. Ajouter un * : "source : JK Rowling's twitter account".
-
-// 5. Améliorer l'affichage des tweets (réduire la place occuper par le tableau ?) 
 
 // 6. Pb : Le bouton "trans women are women too" Apparait même quand pikachu fait le K.O
 
@@ -121,3 +139,5 @@ export default App;
 
 
 // 3. jkrowlng qui disparait de plus en plus
+//// 4. Ajouter un * : "source : JK Rowling's twitter account".
+// 5. Améliorer l'affichage des tweets (réduire la place occuper par le tableau ?) 

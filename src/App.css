@@ -5,18 +5,29 @@
 
 .jk-tweet, .pika-tweet {
     display: flex;
-    height: 80px;
+    height: 100px;
     overflow: scroll;
     border: double black;
     padding: 3px;
     font-family: 'Courier Prime', monospace;
 }
+#foudre-id {
+    position: fixed;
+    width: 40%;
+    right:700px;
+    bottom: 20px;
+}
+.hide-foudre {
+    display: none;
+}
+
 
 .jk-tweet span, .pika-tweet span {
     display: block;
     margin: auto;
     padding: 0 10px;
 }
+
 
 .error {
     display: flex;
@@ -27,12 +38,10 @@
     margin: auto;
 }
 
-/* .ko-animation-origin {
-    transition-property: transform;
-    transition-duration: 1s;
-    transition-timing-function: ease;
-} */
 
+
+
+/* //Animation */
 .ko-animation-origin {
     opacity: 1;
     transition: transform 1s, opacity 0.5s ease;
@@ -49,4 +58,35 @@
 
 .blink-class {
     transition: transform 1s, opacity 0.5s ease-in;
+}
+
+
+/* // FOOTER // */
+
+footer {
+    font-size: 12px;
+    margin: 50px 0 8px 0;
+    height: 70px;
+}
+.elem {
+    height: 70px;
+        /* bring the footer closer to the content */
+    vertical-align: middle;
+    line-height: 120px;
+    text-align: center;
+    margin: auto;
+    white-space: nowrap;
+}
+
+
+
+/* Icones custom */
+#logos a {
+margin: 0 10px;
+color: #000;
+opacity: 0.6;
+transition: all ease 300ms;
+}
+#logos a:hover {
+    opacity: 0.5;
 }

@@ -4,13 +4,13 @@ import './index.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-import AppPresent from './selectCharacter/AppPresent';
+//  import AppPresent from './selectCharacter/AppPresent';
 
 
 ReactDOM.render(
-  // <AppPresent />
+  //  <AppPresent />
   
-    <App />
+   <App />
   , 
   document.getElementById('root')
 );

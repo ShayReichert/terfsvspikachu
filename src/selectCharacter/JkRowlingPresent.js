@@ -1,37 +1,23 @@
 import React, { Component } from 'react';
 import '../App.css';
 import jkrowling from '../img/jk.png';
+import handleClicks from './handleClicks';
 
 
 class JkRowlingPresent extends Component {
 
-    state = {
-        bg: ""
-    }
-    
-
-    handleClick = () => {
-        this.setState({
-            bg: 'bg-danger'
-        })
-    }
-
     render() {
 
-        if(this.state.bg === 'bg-danger') {
-            throw new Error();
-        }
+        const { handleClick, hocState} = this.props;
 
         return (
-            <div className={`col ${this.state.bg}`}>
-                <img onClick={this.handleClick} width="250px" src={jkrowling} alt="jkrowling" />
+            <div className={`col ${hocState.bg}`}>
+                <img onClick={handleClick} width="250px" src={jkrowling} alt="jkrowling" />
             </div>
         )
-
     }
-
 
 }
 
-export default JkRowlingPresent;
+export default handleClicks(JkRowlingPresent);
 
