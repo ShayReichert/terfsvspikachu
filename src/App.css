@@ -11,13 +11,14 @@
     padding: 3px;
     font-family: 'Courier Prime', monospace;
 }
-#foudre-id {
+#lightning-id {
     position: fixed;
     width: 40%;
-    right:700px;
-    bottom: 20px;
+    left: 100px;
+    top: -30px;
+    
 }
-.hide-foudre {
+.hide-lightning {
     display: none;
 }
 

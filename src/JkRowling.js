@@ -6,18 +6,19 @@ import countHits from './countHits';
 
 class JkRowling extends Component {
 
-
+// Faire une animation pour les attacks de JK (truc 'rigolo' de terf ?) 
+// Afficher un gros "VAGINA" ou "PENIS" sur pikachu (Math.floor/Math.random)
 
     render() {
 
-        const { name, hocState, addOneHit, life, jktweet, handleKill } = this.props;
+        const { attack, hocState, addOneHit, life, jktweet, handleKill } = this.props;
 
         // K.O array display
         const lifeValue = life > 0 ? (<td>{life} %</td>)
             : (<td> <span className="badge badge-danger">K.O !</span></td>);
 
         // K.O button display
-        const button = life > 0 ? (<button onClick={addOneHit} className="btn btn-info m-3"> {name} Attack</button>)
+        const button = life > 0 ? (<button onClick={addOneHit} className="btn btn-info m-3"> {attack} Attack</button>)
             : (<button className="btn btn-danger m-3 disabled" id="btn-fixed">K.O</button>);
 
         // Stephen button

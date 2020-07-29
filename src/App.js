@@ -54,8 +54,8 @@ class App extends Component {
         <h1>Terfs vs Pikachu</h1>
         <hr />
         <div className="row">
-          <JkRowling  handleKill={this.kill} jktweet={jkTweet} name='"Say Transphobic Bullshit"' life={jkrowling} reduceHandler={this.reduceLife} />
-          <Pikachu pikatweet={pikachuTweet} defenseName="Self-care" name='"Thunder"' life={pikachu} reduceHandler={this.reduceLife} />
+          <JkRowling  handleKill={this.kill} jktweet={jkTweet} attack='"Say Transphobic Bullshit"' life={jkrowling} reduceHandler={this.reduceLife} />
+          <Pikachu pikatweet={pikachuTweet}  attack='"Thunder"' life={pikachu} reduceHandler={this.reduceLife} />
         </div>
 
         <footer>
@@ -90,7 +90,7 @@ export default App;
 
 // 6. Pb : Le bouton "trans women are women too" Apparait même quand pikachu fait le K.O
 
-
+// 7. Eclair : gérer les media queries (positionnement sur JK rowling)
 
 
 // Idées :
