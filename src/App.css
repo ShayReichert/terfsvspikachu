@@ -1,93 +1,183 @@
-.app-div {
-    max-height: 100vh;
-    margin: 10px auto;
+body,
+html {
+    height: 100%;
+}
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-align: center;
 }
 
-.jk-tweet, .pika-tweet {
+.app-div {
+    position: relative;
+    height: 98vh;
+    min-height: 100%;
+    margin: 10px auto;
+}
+.header {
+    padding: 10px;
+    margin: auto;
+    background-color: #fff;
+}
+
+/* Titre "Terfs vs Pikachu */
+.container h1 {
+    margin: 0;
+    color: #535353;
+    font-family: "Krona One", Arial, Helvetica, sans-serif;
+    font-size: 2em;
+    letter-spacing: 8px;
+}
+#h1-pikachu,
+#h1-terfs {
+    margin: 0;
+    font-size: 3em;
+    letter-spacing: 8px;
+}
+.pikajk {
+    margin-top: -50px;
+    height: 90%;
+}
+.pikajk img {
+    margin-top: -10px;
+}
+
+.jk-tweet,
+.pika-tweet {
     display: flex;
     height: 100px;
     overflow: scroll;
     border: double black;
     padding: 3px;
-    font-family: 'Courier Prime', monospace;
+    font-family: "Courier Prime", monospace;
 }
+
+/* Animations on attacks */
 #lightning-id {
     position: fixed;
     width: 40%;
     left: 100px;
     top: -30px;
-    
 }
 .hide-lightning {
     display: none;
 }
+#vagina-id {
+    z-index: 99;
+    transform: rotate(15deg);
+    position: fixed;
+    width: 40%;
+    right: 100px;
+    top: 170px;
+}
+.hide-vagina {
+    display: none;
+}
 
-
-.jk-tweet span, .pika-tweet span {
+.jk-tweet span,
+.pika-tweet span {
     display: block;
     margin: auto;
     padding: 0 10px;
 }
 
-
-.error {
-    display: flex;
-}
-.error p {
-    color: #fff;
-    font-size: 20px;
-    margin: auto;
-}
-
-
-
-
-/* //Animation */
-.ko-animation-origin {
-    opacity: 1;
-    transition: transform 1s, opacity 0.5s ease;
-}
-
-.ko-animation {
-    transform: translateY(400px);
-    opacity: 0;
-}
+/* //K.O Animation */
 #btn-fixed {
     margin: auto;
     align-items: center;
 }
-
 .blink-class {
     transition: transform 1s, opacity 0.5s ease-in;
 }
+.ko-animation {
+    animation-duration: 800ms;
+    animation-name: slidedown;
+    animation-fill-mode: forwards;
+}
 
+@keyframes slidedown {
+    from {
+        opacity: 1;
+    }
+    25% {
+        transform: translateY(-40px);
+        opacity: 0.8;
+    }
+    70% {
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(400px);
+        opacity: 0;
+    }
+}
 
 /* // FOOTER // */
-
 footer {
-    font-size: 12px;
-    margin: 50px 0 8px 0;
-    height: 70px;
+    position: absolute;
+    width: 97.5%;
+    bottom: 0;
+    font-size: 11px;
+    background-color: #fff;
+    color: #535353;
+    border-radius: 2px;
 }
 .elem {
-    height: 70px;
-        /* bring the footer closer to the content */
+    /* bring the footer closer to the content */
     vertical-align: middle;
-    line-height: 120px;
     text-align: center;
     margin: auto;
     white-space: nowrap;
 }
-
-
-
 /* Icones custom */
 #logos a {
-margin: 0 10px;
-color: #000;
-opacity: 0.6;
-transition: all ease 300ms;
+    margin: 0 10px;
+    color: #000;
+    opacity: 0.6;
+    transition: all ease 300ms;
 }
 #logos a:hover {
     opacity: 0.5;
+}
+#logos a i {
+    color: #535353;
+}
+
+/* // MEDIA QUERIES (for xxl screens) */
+
+@media only screen and (min-width: 1400px) {
+    .app-div {
+        max-width: 1280px;
+    }
+    .jk-tweet,
+    .pika-tweet {
+        margin-top: 5%;
+    }
+    .pikajk img {
+        margin: 10% 0 5% 0;
+    }
+    .pikajk table {
+        margin: 5% 0 0% 0;
+    }
+
+    /* Tweets display */
+    .jk-tweet,
+    .pika-tweet {
+        height: 200px;
+        width: 500px;
+    }
+
+    /* //GIF POSITION */
+    #lightning-id {
+        width: 30%;
+        left: 270px;
+        top: -240px;
+    }
+    #vagina-id {
+        width: 30%;
+        right: 350px;
+        top: 0px;
+    }
 }

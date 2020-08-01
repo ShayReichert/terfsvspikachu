@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import pikachu from './img/pikachu.png';
-import lightning from './foudre.gif';
+import lightning from './img/foudre.gif';
 import countHits from './countHits';
 
 class Pikachu extends Component {
@@ -50,9 +50,15 @@ class Pikachu extends Component {
         // When K.O, tweet text disapear
         const tweetText = life > 0 && (<div className="pika-tweet"> <span>{pikatweet}</span></div>);
 
+        // When K.O, Pikachu disapear Animation
+        const image = life > 0 ? (<img width="230px" src={pikachu} alt="pikachu" />)
+            : (<img className="ko-animation-origin ko-animation" width="230px" src={pikachu} alt="pikachu" />);
+
+
         return (
             <div className="col d-flex flex-column align-items-center">
-                <img width="230px" src={pikachu} alt="pikachu" />
+                <h1 id="h1-pikachu">Pikachu</h1>
+                {image}
 
                 {/* Eclair image : */}
                 <img id="lightning-id" className={this.state.lightningOnOff} src={lightning} alt="foudre" />

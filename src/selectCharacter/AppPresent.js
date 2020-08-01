@@ -35,3 +35,4 @@ export default AppPresent;
 
 
 
+// Attentio, les fichiers dans selectCharacter sont exclu des commit (gitignore)
