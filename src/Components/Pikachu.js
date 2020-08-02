@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import './App.css';
-import pikachu from './img/pikachu.png';
-import lightning from './img/foudre.gif';
+import '../App.css';
+import pikachu from '../img/pikachu.png';
+import lightning from '../img/foudre.gif';
 import countHits from './countHits';
 
 class Pikachu extends Component {

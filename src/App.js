@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import './App.css';
-import Pikachu from './Pikachu';
-import JkRowling from './JkRowling';
-import jsonTweets from './tweets.json';
+import Pikachu from './Components/Pikachu';
+import JkRowling from './Components/JkRowling';
+import jsonTweets from './Components/tweets.json';
+import Modal from './Components/Modal';
 
 
 class App extends Component {
@@ -15,8 +16,16 @@ class App extends Component {
       jkrowling: 100,
       jkTweet: "Good evening Pikachu",
       pikachuTweet: "Hi Johanne",
-      isStephenKiller: false
+      isStephenKiller: false,
+      showModal: true
     }
+  }
+
+  // Hide Modal
+  handleHide = () => {
+    this.setState({
+      showModal: false
+    })
   }
 
   //Generate a random numb for json files
@@ -24,7 +33,7 @@ class App extends Component {
     return Math.floor(Math.random() * (jsonTweets.pikachu.length - 1));
   }
 
-
+  // When Stephen King kill JK
   kill = () => {
     this.setState({
       jkrowling: 0,
@@ -38,7 +47,6 @@ class App extends Component {
         jkrowling: this.state.jkrowling - Math.floor(Math.random() * (15 - 5) + 5),
         pikachuTweet: jsonTweets.pikachu[this.randomNumb()].tweet
       })
-
     } else {
       this.setState({
         pikachu: this.state.pikachu - Math.floor(Math.random() * (12 - 5) + 5),
@@ -49,12 +57,12 @@ class App extends Component {
 
   render() {
     const { pikachu, jkrowling, jkTweet, pikachuTweet, isStephenKiller } = this.state;
-
+    const modal = this.state.showModal && (<Modal close={this.handleHide}/>)
     return (
       <div className="app-div container text-center">
         <div className="header">
           <h1>vs</h1>
-          {/* <hr /> */}
+        {modal}
         </div>
         <div className="row pikajk">
           <JkRowling handleKill={this.kill} jktweet={jkTweet} attack='"Say Transphobic Bullshit"' life={jkrowling} reduceHandler={this.reduceLife} isStephenKiller={isStephenKiller} />
@@ -89,12 +97,15 @@ export default App;
 
 
 ////// MAP ROAD : 
+// 7. Faire un fichier texte "Documentation : Terfs vs Pikachu" qui explique mon code
+
+// 8. Créer un repo GitHub
+// Exclure le dossier selectCharacter de la mise en ligne (voir si le gitgnore à marché)
+// Faire un test de Netlify pour la mise en ligne et le partage.
+// Nom de domaine ?
+
 // 9. Vérifier le contenu avec petit loup (taductions, phrases de pikachu...)
 // 10 DONE
-// 11. Faire un test de Netlify pour la mise en ligne et le partage.
-// 12. Exclure le dossier selectCharacter de la mise en ligne (voir si le gitgnore à marché)
-
-
 
 
 // DONE : 
@@ -119,3 +130,4 @@ export default App;
 ////////// Solution : AJout d'un state isStephenKiller, que l'on passe à true quand le btn Help me Stephen est cliqué.
 // 7 Nettoyer le code. 
 // 8 Favicon personnalisé et description du site etc 
+// Faire un modal / popup qui explique le but du jeu

@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import './App.css';
-import jkrowling from './img/jk.png';
+import '../App.css';
+import jkrowling from '../img/jk.png';
 import countHits from './countHits';
-import vagina from './img/vaginapenis.gif';
+import vagina from '../img/vaginapenis.gif';
 
 
 class JkRowling extends Component {
