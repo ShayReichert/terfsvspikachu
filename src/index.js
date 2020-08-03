@@ -6,9 +6,9 @@ import * as serviceWorker from './serviceWorker';
 
 
 ReactDOM.render(
-  <StrictMode>
+  <React.StrictMode>
     <App />
-  </StrictMode>,
+  </React.StrictMode>,
   document.getElementById('root')
 );
 
@@ -16,7 +16,6 @@ ReactDOM.render(
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: https://bit.ly/CRA-PWA
 serviceWorker.unregister();
-//<React.StrictMode></React.StrictMode>
 
 
 // AppPresent : selectCharacter
