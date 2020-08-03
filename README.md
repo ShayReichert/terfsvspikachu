@@ -10,7 +10,7 @@
 - Keep informed of JK Rowling's latest transphobic tweets, but with Pikachu by your side.
 - It's feel like playing, even if it's still hurts.
 - 'Cause now pokemon are our only valuable heartwarming childhood memory.
-- Want to "play" with this app ? Go here :
+- Want to "play" with this app ? Go here : #
 
 ---
 
