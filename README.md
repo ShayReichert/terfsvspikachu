@@ -2,7 +2,7 @@
 ## JK Rowling's latest transphobic tweets... AND PIKACHU !
 
 ***Click on this image to access :***
-[![Terfsvspikachu](https://github.com/ShayReichert/markdown_text_editor/blob/master/public/screen_markdown.png)](https://shayreichert.github.io/markdown_text_editor/)
+[![Terfsvspikachu](https://github.com/ShayReichert/terfsvspikachu/blob/master/screen-pika-terfs.png)](#)
 
 
 ## Description
@@ -10,7 +10,7 @@
 - Keep informed of JK Rowling's latest transphobic tweets, but with Pikachu by your side.
 - It's feel like playing, even if it's still hurts.
 - 'Cause now pokemon are our only valuable heartwarming childhood memory.
-- Want "play" with this app ? Go here :
+- Want to "play" with this app ? Go here :
 
 ---
 
