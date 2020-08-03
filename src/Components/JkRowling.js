@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import countHits from './CountHits';
+import countHits from './countHits';
 import '../App.css';
 import jkrowling from '../img/jk.png';
 import vagina from '../img/vaginapenis.gif';

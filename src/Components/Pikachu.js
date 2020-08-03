@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import countHits from './CountHits';
+import countHits from './countHits';
 import '../App.css';
 import pikachu from '../img/pikachu.png';
 import lightning from '../img/foudre.gif';
