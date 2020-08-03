@@ -1,29 +1,29 @@
 {
   "files": {
-    "main.css": "/ShayReichert/terfsvspikachu/static/css/main.fd7b5871.chunk.css",
-    "main.js": "/ShayReichert/terfsvspikachu/static/js/main.18e60dd0.chunk.js",
-    "main.js.map": "/ShayReichert/terfsvspikachu/static/js/main.18e60dd0.chunk.js.map",
-    "runtime-main.js": "/ShayReichert/terfsvspikachu/static/js/runtime-main.17e1527d.js",
-    "runtime-main.js.map": "/ShayReichert/terfsvspikachu/static/js/runtime-main.17e1527d.js.map",
-    "static/css/2.af3c1da9.chunk.css": "/ShayReichert/terfsvspikachu/static/css/2.af3c1da9.chunk.css",
-    "static/js/2.c563c666.chunk.js": "/ShayReichert/terfsvspikachu/static/js/2.c563c666.chunk.js",
-    "static/js/2.c563c666.chunk.js.map": "/ShayReichert/terfsvspikachu/static/js/2.c563c666.chunk.js.map",
-    "index.html": "/ShayReichert/terfsvspikachu/index.html",
-    "precache-manifest.f7dda2ee61960269fb3149a22a7cf9d0.js": "/ShayReichert/terfsvspikachu/precache-manifest.f7dda2ee61960269fb3149a22a7cf9d0.js",
-    "service-worker.js": "/ShayReichert/terfsvspikachu/service-worker.js",
-    "static/css/2.af3c1da9.chunk.css.map": "/ShayReichert/terfsvspikachu/static/css/2.af3c1da9.chunk.css.map",
-    "static/css/main.fd7b5871.chunk.css.map": "/ShayReichert/terfsvspikachu/static/css/main.fd7b5871.chunk.css.map",
-    "static/js/2.c563c666.chunk.js.LICENSE.txt": "/ShayReichert/terfsvspikachu/static/js/2.c563c666.chunk.js.LICENSE.txt",
-    "static/media/foudre.gif": "/ShayReichert/terfsvspikachu/static/media/foudre.8cb4f463.gif",
-    "static/media/jk.png": "/ShayReichert/terfsvspikachu/static/media/jk.6ad49947.png",
-    "static/media/pikachu.png": "/ShayReichert/terfsvspikachu/static/media/pikachu.d6b8f572.png",
-    "static/media/vaginapenis.gif": "/ShayReichert/terfsvspikachu/static/media/vaginapenis.6635e811.gif"
+    "main.css": "/terfsvspikachu/static/css/main.fd7b5871.chunk.css",
+    "main.js": "/terfsvspikachu/static/js/main.bbde4478.chunk.js",
+    "main.js.map": "/terfsvspikachu/static/js/main.bbde4478.chunk.js.map",
+    "runtime-main.js": "/terfsvspikachu/static/js/runtime-main.446f2306.js",
+    "runtime-main.js.map": "/terfsvspikachu/static/js/runtime-main.446f2306.js.map",
+    "static/css/2.af3c1da9.chunk.css": "/terfsvspikachu/static/css/2.af3c1da9.chunk.css",
+    "static/js/2.c563c666.chunk.js": "/terfsvspikachu/static/js/2.c563c666.chunk.js",
+    "static/js/2.c563c666.chunk.js.map": "/terfsvspikachu/static/js/2.c563c666.chunk.js.map",
+    "index.html": "/terfsvspikachu/index.html",
+    "precache-manifest.f4f380bbd8850bf85566215ffa61cd8f.js": "/terfsvspikachu/precache-manifest.f4f380bbd8850bf85566215ffa61cd8f.js",
+    "service-worker.js": "/terfsvspikachu/service-worker.js",
+    "static/css/2.af3c1da9.chunk.css.map": "/terfsvspikachu/static/css/2.af3c1da9.chunk.css.map",
+    "static/css/main.fd7b5871.chunk.css.map": "/terfsvspikachu/static/css/main.fd7b5871.chunk.css.map",
+    "static/js/2.c563c666.chunk.js.LICENSE.txt": "/terfsvspikachu/static/js/2.c563c666.chunk.js.LICENSE.txt",
+    "static/media/foudre.gif": "/terfsvspikachu/static/media/foudre.8cb4f463.gif",
+    "static/media/jk.png": "/terfsvspikachu/static/media/jk.6ad49947.png",
+    "static/media/pikachu.png": "/terfsvspikachu/static/media/pikachu.d6b8f572.png",
+    "static/media/vaginapenis.gif": "/terfsvspikachu/static/media/vaginapenis.6635e811.gif"
   },
   "entrypoints": [
-    "static/js/runtime-main.17e1527d.js",
+    "static/js/runtime-main.446f2306.js",
     "static/css/2.af3c1da9.chunk.css",
     "static/js/2.c563c666.chunk.js",
     "static/css/main.fd7b5871.chunk.css",
-    "static/js/main.18e60dd0.chunk.js"
+    "static/js/main.bbde4478.chunk.js"
   ]
 }
