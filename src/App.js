@@ -43,18 +43,34 @@ class App extends Component {
 
   // Manage Attacks
   reduceLife = (param) => {
-    if (param === 'JkRowling') {
-      this.setState({
-        pikachu: this.state.pikachu - Math.floor(Math.random() * (12 - 5) + 5),
-        jkTweet: jsonTweets.jkrowling[this.randomNumb()].tweet
-
-      })
-    } else {
-      this.setState({
-        jkrowling: this.state.jkrowling - Math.floor(Math.random() * (15 - 5) + 5),
-        pikachuTweet: jsonTweets.pikachu[this.randomNumb()].tweet
-      })
+    // console.log(param)
+    switch (param) {
+      case 'JkRowling' :
+        this.setState({
+          pikachu: this.state.pikachu - Math.floor(Math.random() * (12 - 5) + 5),
+          jkTweet: jsonTweets.jkrowling[this.randomNumb()].tweet
+        })
+        break;
+      case 'Pikachu' :
+        this.setState({
+          jkrowling: this.state.jkrowling - Math.floor(Math.random() * (15 - 5) + 5),
+          pikachuTweet: jsonTweets.pikachu[this.randomNumb()].tweet
+        })
+        break;
+      default:
+        console.log("mmmf");
     }
+    // if (param === 'JkRowling') {
+    //   this.setState({
+    //     pikachu: this.state.pikachu - Math.floor(Math.random() * (12 - 5) + 5),
+    //     jkTweet: jsonTweets.jkrowling[this.randomNumb()].tweet
+    //   })
+    // } else {
+    //   this.setState({
+    //     jkrowling: this.state.jkrowling - Math.floor(Math.random() * (15 - 5) + 5),
+    //     pikachuTweet: jsonTweets.pikachu[this.randomNumb()].tweet
+    //   })
+    // }
   }
 
   render() {
