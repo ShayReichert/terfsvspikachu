@@ -12,7 +12,7 @@ class Pikachu extends Component {
         lightningOnOff: "hide-lightning"
     }
 
-    handleOnClick = () => {
+    handleOnClickPika = () => {
         this.props.addOneHit();
         this.triggerLightningAnimation();
     }
@@ -44,7 +44,7 @@ class Pikachu extends Component {
         const lifeValue = life > 0 ? (<td>{life} %</td>)
             : (<td> <span className="badge badge-danger">K.O !</span></td>);
 
-        const Button = life > 0 ? (<button onClick={this.handleOnClick} className="btn btn-warning m-3">{attack} Attack</button>)
+        const Button = life > 0 ? (<button onClick={this.handleOnClickPika} className="btn btn-warning m-3">{attack} Attack</button>)
             : (<button className="btn btn-danger m-3 disabled">K.O</button>);
 
         // When K.O, tweet text disapear

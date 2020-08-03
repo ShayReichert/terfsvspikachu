@@ -12,7 +12,7 @@ class JkRowling extends Component {
         vaginaOnOff: "hide-vagina"
     }
 
-    handleOnClick = () => {
+    handleOnClickJK = () => {
         this.props.addOneHit();
         this.triggerVaginaAnimation();
     }
@@ -44,7 +44,7 @@ class JkRowling extends Component {
             : (<td> <span className="badge badge-danger">K.O !</span></td>);
 
         // K.O button display
-        const button = life > 0 ? (<button onClick={this.handleOnClick} className="btn btn-info m-3"> {attack} Attack</button>)
+        const button = life > 0 ? (<button onClick={this.handleOnClickJK} className="btn btn-info m-3"> {attack} Attack</button>)
             : (<button className="btn btn-danger m-3 disabled" id="btn-fixed">K.O</button>);
 
         // Stephen button (if Pikachu kills JK, don't display this button)
