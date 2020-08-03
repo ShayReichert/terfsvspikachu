@@ -6,11 +6,15 @@ import vagina from '../img/vaginapenis.gif';
 
 
 class JkRowling extends Component {
+    constructor(props) {
+        super(props)
+        // MANAGE vagina-penis (terf attack)
+        this.state = {
+            vaginaOnOff: "hide-vagina"
+        }
 
-    // MANAGE vagina-penis (terf attack)
-    state = {
-        vaginaOnOff: "hide-vagina"
     }
+
 
     handleOnClickJK = () => {
         this.props.addOneHit();
@@ -48,8 +52,8 @@ class JkRowling extends Component {
             : (<button className="btn btn-danger m-3 disabled" id="btn-fixed">K.O</button>);
 
         // Stephen button (if Pikachu kills JK, don't display this button)
-        const helpSteven = life < 20 && life > 0 ? (<button onClick={handleKill} className="btn btn-danger m-1">Help Me Steven King!</button>) 
-        : (life <= 0 && isStephenKiller) && (<button className="btn btn-secondary m-1 disabled">'Trans women are women'</button>);
+        const helpSteven = life < 20 && life > 0 ? (<button onClick={handleKill} className="btn btn-danger m-1">Help Me Steven King!</button>)
+            : (life <= 0 && isStephenKiller) && (<button className="btn btn-secondary m-1 disabled">'Trans women are women'</button>);
 
         // When K.O, tweet text disapear
         const tweetText = life > 0 && (<div className="jk-tweet"> <span>{jktweet}</span> </div>);
@@ -62,7 +66,7 @@ class JkRowling extends Component {
             <div className="col d-flex flex-column align-items-center">
                 <h1 id="h1-terfs">Terfs</h1>
                 {/* Vagina-Penis.gif (when JK Rowling is attacking) : */}
-                <img id="vagina-id" className={this.state.vaginaOnOff}  src={vagina} alt="vagina" />
+                <img id="vagina-id" className={this.state.vaginaOnOff} src={vagina} alt="vagina" />
 
                 {image}
                 {button}
