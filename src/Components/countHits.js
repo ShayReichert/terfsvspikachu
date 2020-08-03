@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-const CountHits = (WrappedComponent) => {
+const countHits = (WrappedComponent) => {
 
     class CountHits extends Component {
 
@@ -34,4 +34,4 @@ const CountHits = (WrappedComponent) => {
 
 }
 
-export default CountHits;
+export default countHits;
