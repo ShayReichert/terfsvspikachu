@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import countHits from './countHits';
+import CountHits from './CountHits';
 import '../App.css';
 import pikachu from '../img/pikachu.png';
 import lightning from '../img/foudre.gif';
@@ -87,4 +87,4 @@ class Pikachu extends Component {
     }
 }
 
-export default countHits(Pikachu);
+export default CountHits(Pikachu);

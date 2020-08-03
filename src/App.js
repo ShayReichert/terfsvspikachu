@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './App.css';
-import './Components/countHits';
 import Pikachu from './Components/Pikachu';
 import JkRowling from './Components/JkRowling';
 import jsonTweets from './Components/tweets.json';
