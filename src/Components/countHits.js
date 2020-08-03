@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 const CountHits = (WrappedComponent) => {
 
-    class CountHits extends Component {
+    class NewComponent extends Component {
 
         state = {
             hits: 0
@@ -30,7 +30,7 @@ const CountHits = (WrappedComponent) => {
         }
     }
     
-    return CountHits;
+    return NewComponent;
 
 }
 
