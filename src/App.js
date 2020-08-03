@@ -41,6 +41,7 @@ class App extends Component {
     })
   }
 
+  // Manage Attacks
   reduceLife = (param) => {
     if (param === 'Pikachu') {
       this.setState({
