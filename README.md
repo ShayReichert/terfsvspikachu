@@ -24,7 +24,7 @@
 ## What you'll learn by making this app
 - Functions who are doing stuffs. A lot.
 - Display a modal in React.
-- Use a <WrappedComponent>.
+- Use a 'WrappedComponent'.
 - Trigger different animations according to user actions
 - Deploy on Netlify.
 
