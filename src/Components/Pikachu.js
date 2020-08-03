@@ -40,7 +40,6 @@ class Pikachu extends Component {
     render() {
         const { attack, hocState, life, pikatweet } = this.props;
 
-
         const lifeValue = life > 0 ? (<td>{life} %</td>)
             : (<td> <span className="badge badge-danger">K.O !</span></td>);
 
