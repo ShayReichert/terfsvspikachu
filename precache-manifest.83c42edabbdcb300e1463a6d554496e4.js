@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "f58eec69016136e8a76dc57f11d7b254",
+    "revision": "dda50974fe6c031f3eae8cd06438a0ca",
     "url": "/terfsvspikachu/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/terfsvspikachu/static/css/2.af3c1da9.chunk.css"
   },
   {
-    "revision": "a844ff888cf6ba52e809",
+    "revision": "9dcd1ef329cca9ea73fe",
     "url": "/terfsvspikachu/static/css/main.fd7b5871.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/terfsvspikachu/static/js/2.c563c666.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "a844ff888cf6ba52e809",
-    "url": "/terfsvspikachu/static/js/main.bbde4478.chunk.js"
+    "revision": "9dcd1ef329cca9ea73fe",
+    "url": "/terfsvspikachu/static/js/main.f715ba60.chunk.js"
   },
   {
     "revision": "dd6ab420ef717a9c9d09",

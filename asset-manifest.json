@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/terfsvspikachu/static/css/main.fd7b5871.chunk.css",
-    "main.js": "/terfsvspikachu/static/js/main.bbde4478.chunk.js",
-    "main.js.map": "/terfsvspikachu/static/js/main.bbde4478.chunk.js.map",
+    "main.js": "/terfsvspikachu/static/js/main.f715ba60.chunk.js",
+    "main.js.map": "/terfsvspikachu/static/js/main.f715ba60.chunk.js.map",
     "runtime-main.js": "/terfsvspikachu/static/js/runtime-main.446f2306.js",
     "runtime-main.js.map": "/terfsvspikachu/static/js/runtime-main.446f2306.js.map",
     "static/css/2.af3c1da9.chunk.css": "/terfsvspikachu/static/css/2.af3c1da9.chunk.css",
     "static/js/2.c563c666.chunk.js": "/terfsvspikachu/static/js/2.c563c666.chunk.js",
     "static/js/2.c563c666.chunk.js.map": "/terfsvspikachu/static/js/2.c563c666.chunk.js.map",
     "index.html": "/terfsvspikachu/index.html",
-    "precache-manifest.f4f380bbd8850bf85566215ffa61cd8f.js": "/terfsvspikachu/precache-manifest.f4f380bbd8850bf85566215ffa61cd8f.js",
+    "precache-manifest.83c42edabbdcb300e1463a6d554496e4.js": "/terfsvspikachu/precache-manifest.83c42edabbdcb300e1463a6d554496e4.js",
     "service-worker.js": "/terfsvspikachu/service-worker.js",
     "static/css/2.af3c1da9.chunk.css.map": "/terfsvspikachu/static/css/2.af3c1da9.chunk.css.map",
     "static/css/main.fd7b5871.chunk.css.map": "/terfsvspikachu/static/css/main.fd7b5871.chunk.css.map",
@@ -24,6 +24,6 @@
     "static/css/2.af3c1da9.chunk.css",
     "static/js/2.c563c666.chunk.js",
     "static/css/main.fd7b5871.chunk.css",
-    "static/js/main.bbde4478.chunk.js"
+    "static/js/main.f715ba60.chunk.js"
   ]
 }
