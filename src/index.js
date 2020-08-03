@@ -1,16 +1,14 @@
-import React from 'react';
+import React, { StrictMode } from 'react';
 import ReactDOM from 'react-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-//  import AppPresent from './selectCharacter/AppPresent';
 
 
 ReactDOM.render(
-  //  <AppPresent />
-  
-   <App />
-  , 
+  <StrictMode>
+    <App />
+  </StrictMode>,
   document.getElementById('root')
 );
 
