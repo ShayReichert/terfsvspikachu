@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import CountHits from './CountHits';
+import countHits from './CountHits';
 import '../App.css';
 import jkrowling from '../img/jk.png';
 import vagina from '../img/vaginapenis.gif';
@@ -91,5 +91,5 @@ class JkRowling extends Component {
     }
 }
 
-export default CountHits(JkRowling);
+export default countHits(JkRowling);
 
