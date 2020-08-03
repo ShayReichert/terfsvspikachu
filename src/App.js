@@ -43,15 +43,16 @@ class App extends Component {
 
   // Manage Attacks
   reduceLife = (param) => {
-    if (param === 'Pikachu') {
-      this.setState({
-        jkrowling: this.state.jkrowling - Math.floor(Math.random() * (15 - 5) + 5),
-        pikachuTweet: jsonTweets.pikachu[this.randomNumb()].tweet
-      })
-    } else {
+    if (param === 'JkRowling') {
       this.setState({
         pikachu: this.state.pikachu - Math.floor(Math.random() * (12 - 5) + 5),
         jkTweet: jsonTweets.jkrowling[this.randomNumb()].tweet
+
+      })
+    } else {
+      this.setState({
+        jkrowling: this.state.jkrowling - Math.floor(Math.random() * (15 - 5) + 5),
+        pikachuTweet: jsonTweets.pikachu[this.randomNumb()].tweet
       })
     }
   }
