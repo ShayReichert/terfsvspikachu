@@ -43,7 +43,7 @@ class App extends Component {
 
   // Manage Attacks
   reduceLife = (param) => {
-    // console.log(param)
+    console.log(param);
     switch (param) {
       case 'JkRowling' :
         this.setState({

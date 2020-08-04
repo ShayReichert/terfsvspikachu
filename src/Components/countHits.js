@@ -9,9 +9,8 @@ const countHits = (WrappedComponent) => {
                 hits: 0
             }
         }
-        
-       
-    
+
+
         addOne = () => {
             this.setState(prevState => {
                 return {
@@ -22,7 +21,9 @@ const countHits = (WrappedComponent) => {
 
 
         componentDidUpdate = (prevProps, prevState) => {
-            if(this.state !== prevState) {
+            if (this.state !== prevState) {
+                console.log(WrappedComponent)
+                console.log(WrappedComponent.name)
                 const CompName = WrappedComponent.name;
                 this.props.reduceHandler(CompName);
             }
@@ -30,10 +31,14 @@ const countHits = (WrappedComponent) => {
 
         render() {
 
-            return <WrappedComponent hocState={this.state} addOneHit={this.addOne} {...this.props} />
+            return <WrappedComponent
+                hocState={this.state}
+                addOneHit={this.addOne}
+                {...this.props}
+            />
         }
     }
-    
+
     return NewComponent;
 
 }
