@@ -6,13 +6,10 @@ import vagina from '../img/vaginapenis.gif';
 
 
 class JkRowling extends Component {
-    constructor(props) {
-        super(props)
-        // MANAGE vagina-penis (terf attack)
-        this.state = {
-            vaginaOnOff: "hide-vagina"
-        }
 
+    // MANAGE vagina-penis (terf attack)
+    state = {
+        vaginaOnOff: "hide-vagina"
     }
 
 

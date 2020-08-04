@@ -5,17 +5,11 @@ import pikachu from '../img/pikachu.png';
 import lightning from '../img/foudre.gif';
 
 class Pikachu extends Component {
-    constructor(props) {
-        super(props)
-        // MANAGE LIGHTNING (foudre)
-        this.state = {
-            lightningOnOff: "hide-lightning"
-        }
+    
+    // MANAGE LIGHTNING (foudre)
+    state = {
+        lightningOnOff: "hide-lightning"
     }
-
-
-
-
 
     handleOnClickPika = () => {
         this.props.addOneHit();
