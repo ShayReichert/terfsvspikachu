@@ -66,8 +66,11 @@ class JkRowling extends Component {
                 <img id="vagina-id" className={this.state.vaginaOnOff} src={vagina} alt="vagina" />
 
                 {image}
+                <div className="buttons-jk">
                 {button}
                 {helpSteven}
+                </div>
+
 
                 <table className="table table-striped">
                     <thead>

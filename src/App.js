@@ -60,7 +60,7 @@ class App extends Component {
     const { pikachu, jkrowling, jkTweet, pikachuTweet, isStephenKiller } = this.state;
     const modal = this.state.showModal && (<Modal close={this.handleHide} />)
     return (
-      <div className="app-div container text-center">
+      <div className="main-container app-div container text-center">
         <div className="header">
           <h1>vs</h1>
           {modal}
