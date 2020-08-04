@@ -49,7 +49,7 @@ class JkRowling extends Component {
             : (<button className="btn btn-danger m-3 disabled" id="btn-fixed">K.O</button>);
 
         // Stephen button (if Pikachu kills JK, don't display this button)
-        const helpSteven = life < 20 && life > 0 ? (<button onClick={handleKill} className="btn btn-danger m-1">Help Me Steven King!</button>)
+        const helpSteven = life < 20 && life > 0 ? (<button onClick={handleKill} className="btn btn-danger m-1">Help Me Stephen King!</button>)
             : (life <= 0 && isStephenKiller) && (<button className="btn btn-secondary m-1 disabled">'Trans women are women'</button>);
 
         // When K.O, tweet text disapear
