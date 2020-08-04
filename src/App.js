@@ -40,51 +40,34 @@ class App extends Component {
       isStephenKiller: true
     })
   }
-
-  // Manage Attacks
-  reduceLife = (param) => {
-    console.log(param);
-    switch (param) {
-      case 'JkRowling' :
-        this.setState({
-          pikachu: this.state.pikachu - Math.floor(Math.random() * (12 - 5) + 5),
-          jkTweet: jsonTweets.jkrowling[this.randomNumb()].tweet
-        })
-        break;
-      case 'Pikachu' :
-        this.setState({
-          jkrowling: this.state.jkrowling - Math.floor(Math.random() * (15 - 5) + 5),
-          pikachuTweet: jsonTweets.pikachu[this.randomNumb()].tweet
-        })
-        break;
-      default:
-        console.log("mmmf");
-    }
-    // if (param === 'JkRowling') {
-    //   this.setState({
-    //     pikachu: this.state.pikachu - Math.floor(Math.random() * (12 - 5) + 5),
-    //     jkTweet: jsonTweets.jkrowling[this.randomNumb()].tweet
-    //   })
-    // } else {
-    //   this.setState({
-    //     jkrowling: this.state.jkrowling - Math.floor(Math.random() * (15 - 5) + 5),
-    //     pikachuTweet: jsonTweets.pikachu[this.randomNumb()].tweet
-    //   })
-    // }
+  // // Manage Pika Attacks
+  reducePikaLife = () => {
+    this.setState({
+      pikachu: this.state.pikachu - Math.floor(Math.random() * (12 - 5) + 5),
+      jkTweet: jsonTweets.jkrowling[this.randomNumb()].tweet
+    })
   }
+  // // Manage JK Attacks
+  reduceJKLife = () => {
+    this.setState({
+      jkrowling: this.state.jkrowling - Math.floor(Math.random() * (15 - 5) + 5),
+      pikachuTweet: jsonTweets.pikachu[this.randomNumb()].tweet
+    })
+  }
+
 
   render() {
     const { pikachu, jkrowling, jkTweet, pikachuTweet, isStephenKiller } = this.state;
-    const modal = this.state.showModal && (<Modal close={this.handleHide}/>)
+    const modal = this.state.showModal && (<Modal close={this.handleHide} />)
     return (
       <div className="app-div container text-center">
         <div className="header">
           <h1>vs</h1>
-        {modal}
+          {modal}
         </div>
         <div className="row pikajk">
-          <JkRowling handleKill={this.kill} jktweet={jkTweet} attack='"Say Transphobic Bullshit"' life={jkrowling} reduceHandler={this.reduceLife} isStephenKiller={isStephenKiller} />
-          <Pikachu pikatweet={pikachuTweet} attack='"Thunder"' life={pikachu} reduceHandler={this.reduceLife} />
+          <JkRowling handleKill={this.kill} jktweet={jkTweet} attack='"Say Transphobic Bullshit"' life={jkrowling} reduceHandler={this.reducePikaLife} isStephenKiller={isStephenKiller} />
+          <Pikachu pikatweet={pikachuTweet} attack='"Thunder"' life={pikachu} reduceHandler={this.reduceJKLife} />
         </div>
 
         <footer>

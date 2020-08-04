@@ -22,8 +22,6 @@ const countHits = (WrappedComponent) => {
 
         componentDidUpdate = (prevProps, prevState) => {
             if (this.state !== prevState) {
-                console.log(WrappedComponent)
-                console.log(WrappedComponent.name)
                 const CompName = WrappedComponent.name;
                 this.props.reduceHandler(CompName);
             }
