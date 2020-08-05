@@ -1,44 +1,44 @@
-import React, { Component } from 'react';
+// import React, { Component } from 'react';
 
-const countHits = (WrappedComponent) => {
+// const countHits = (WrappedComponent) => {
 
-    class NewComponent extends Component {
-        constructor(props) {
-            super(props)
-            this.state = {
-                hits: 0
-            }
-        }
-
-
-        addOne = () => {
-            this.setState(prevState => {
-                return {
-                    hits: prevState.hits + 1,
-                }
-            })
-        }
+//     class NewComponent extends Component {
+//         constructor(props) {
+//             super(props)
+//             this.state = {
+//                 hits: 0
+//             }
+//         }
 
 
-        componentDidUpdate = (prevProps, prevState) => {
-            if (this.state !== prevState) {
-                const CompName = WrappedComponent.name;
-                this.props.reduceHandler(CompName);
-            }
-        }
+//         addOne = () => {
+//             this.setState(prevState => {
+//                 return {
+//                     hits: prevState.hits + 1,
+//                 }
+//             })
+//         }
 
-        render() {
 
-            return <WrappedComponent
-                hocState={this.state}
-                addOneHit={this.addOne}
-                {...this.props}
-            />
-        }
-    }
+//         componentDidUpdate = (prevProps, prevState) => {
+//             if (this.state !== prevState) {
+//                 const CompName = WrappedComponent.name;
+//                 this.props.reduceHandler(CompName);
+//             }
+//         }
 
-    return NewComponent;
+//         render() {
 
-}
+//             return <WrappedComponent
+//                 hocState={this.state}
+//                 addOneHit={this.addOne}
+//                 {...this.props}
+//             />
+//         }
+//     }
 
-export default countHits;
+//     return NewComponent;
+
+// }
+
+// export default countHits;

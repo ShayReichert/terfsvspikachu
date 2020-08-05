@@ -12,6 +12,8 @@ class App extends Component {
     super(props)
 
     this.state = {
+      pikachuname: "Pikachu",
+      jkname: "J.K Rowling",
       pikachu: 100,
       jkrowling: 100,
       jkTweet: "Good evening Pikachu",
@@ -57,17 +59,17 @@ class App extends Component {
 
 
   render() {
-    const { pikachu, jkrowling, jkTweet, pikachuTweet, isStephenKiller } = this.state;
+    const { pikachu, jkrowling, jkTweet, pikachuTweet, isStephenKiller, pikachuname, jkname } = this.state;
     const modal = this.state.showModal && (<Modal close={this.handleHide} />)
     return (
-      <div className="main-container app-div container text-center">
+      <div className="main-container app-div container-fluid text-center">
         <div className="header">
           <h1>vs</h1>
           {modal}
         </div>
         <div className="row pikajk">
-          <JkRowling handleKill={this.kill} jktweet={jkTweet} attack='"Say Transphobic Bullshit"' life={jkrowling} reduceHandler={this.reducePikaLife} isStephenKiller={isStephenKiller} />
-          <Pikachu pikatweet={pikachuTweet} attack='"Thunder"' life={pikachu} reduceHandler={this.reduceJKLife} />
+          <JkRowling name={jkname} handleKill={this.kill} jktweet={jkTweet} attack='"Say Transphobic Bullshit"' life={jkrowling} reduceHandler={this.reducePikaLife} isStephenKiller={isStephenKiller} />
+          <Pikachu name={pikachuname} pikatweet={pikachuTweet} attack='"Thunder"' life={pikachu} reduceHandler={this.reduceJKLife} />
         </div>
 
         <footer>

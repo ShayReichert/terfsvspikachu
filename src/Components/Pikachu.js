@@ -1,18 +1,18 @@
 import React, { Component } from 'react';
-import countHits from './countHits';
+// import countHits from './countHits';
 import '../App.css';
 import pikachu from '../img/pikachu.png';
 import lightning from '../img/foudre.gif';
 
 class Pikachu extends Component {
-    
+
     // MANAGE LIGHTNING (foudre)
     state = {
         lightningOnOff: "hide-lightning"
     }
 
     handleOnClickPika = () => {
-        this.props.addOneHit();
+        this.props.reduceHandler();
         this.triggerLightningAnimation();
     }
 
@@ -37,16 +37,23 @@ class Pikachu extends Component {
 
 
     render() {
-        const { attack, hocState, life, pikatweet } = this.props;
+        const { attack, life, pikatweet, name } = this.props;
 
-        const lifeValue = life > 0 ? (<td>{life} %</td>)
-            : (<td> <span className="badge badge-danger">K.O !</span></td>);
+        const lifeBarProgress = life > 0 ? (
+            <div className="progress" style={{ height: "20px" }}>
+                <div className="progress-bar progress-bar-striped progress-bar-animated bg-warning" role="progressbar" style={{ width: `${life}%` }} aria-valuenow={life} aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+            ) : ( 
+            <div className="progress disabled-bar" style={{ height: "20px" }}>
+                <div className="progress-bar progress-bar-striped progress-bar-animated bg-warning" role="progressbar" style={{ width: "0%" }} aria-valuenow={life} aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+            );
 
         const Button = life > 0 ? (<button onClick={this.handleOnClickPika} className="btn btn-warning m-3">{attack} Attack</button>)
             : (<button className="btn btn-danger m-3 disabled">K.O</button>);
 
         // When K.O, tweet text disapear
-        const tweetText = life > 0 && (<div className="pika-tweet"> <span>{pikatweet}</span></div>);
+            const tweetText = life > 0 ? (<div className="pika-tweet"> <span>{pikatweet}</span></div>) : (<div className="text-ko">{name} is K.O ! <br/> Refresh to play again.</div>);
 
         // When K.O, Pikachu disapear Animation
         const image = life > 0 ? (<img width="230px" src={pikachu} alt="pikachu" />)
@@ -54,36 +61,25 @@ class Pikachu extends Component {
 
 
         return (
-            <div className="col d-flex flex-column align-items-center">
-                <h1 id="h1-pikachu">Pikachu</h1>
-                {image}
+            <div className="col d-flex flex-column row-pika">
 
-                {/* Eclair image : */}
-                <img id="lightning-id" className={this.state.lightningOnOff} src={lightning} alt="foudre" />
+                <div className="col d-flex flex-column align-items-center">
+                    <h1 id="h1-pikachu">Pikachu</h1>
+                    {image}
+                    {/* Eclair image : */}
+                    <img id="lightning-id" className={this.state.lightningOnOff} src={lightning} alt="foudre" />
+                    {Button}
+                </div>
 
-                {Button}
+                {lifeBarProgress}
 
-                <table className="table table-striped">
-                    <thead>
-                        <tr>
-                            <th scope="col">Hits</th>
-                            <th scope="col">Life</th>
-                        </tr>
-                    </thead>
-
-                    <tbody>
-                        <tr>
-                            <td>{hocState.hits}</td>
-                            {lifeValue}
-                        </tr>
-                    </tbody>
-                </table>
-
-                {tweetText}
+                <div className="col d-flex flex-column align-items-center mt-3 ">
+                    {tweetText}
+                </div>
 
             </div>
         )
     }
 }
 
-export default countHits(Pikachu);
+export default Pikachu;

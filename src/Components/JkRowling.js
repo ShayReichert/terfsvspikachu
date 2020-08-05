@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import countHits from './countHits';
+// import countHits from './countHits';
 import '../App.css';
 import jkrowling from '../img/jk.png';
 import vagina from '../img/vaginapenis.gif';
@@ -14,7 +14,7 @@ class JkRowling extends Component {
 
 
     handleOnClickJK = () => {
-        this.props.addOneHit();
+        this.props.reduceHandler();
         this.triggerVaginaAnimation();
     }
 
@@ -38,11 +38,10 @@ class JkRowling extends Component {
 
     render() {
 
-        const { attack, hocState, life, jktweet, handleKill, isStephenKiller } = this.props;
+        const { attack, life, jktweet, handleKill, isStephenKiller, name } = this.props;
 
-        // K.O array display
-        const lifeValue = life > 0 ? (<td>{life} %</td>)
-            : (<td> <span className="badge badge-danger">K.O !</span></td>);
+        const lifeBarProgress = life > 0 && (<div className="progress-bar progress-bar-striped progress-bar-animated bg-info" role="progressbar" style={{ width: `${life}%` }} aria-valuenow={life} aria-valuemin="0" aria-valuemax="100"></div>
+        );
 
         // K.O button display
         const button = life > 0 ? (<button onClick={this.handleOnClickJK} className="btn btn-info m-3"> {attack} Attack</button>)
@@ -53,47 +52,38 @@ class JkRowling extends Component {
             : (life <= 0 && isStephenKiller) && (<button className="btn btn-secondary m-1 disabled">'Trans women are women'</button>);
 
         // When K.O, tweet text disapear
-        const tweetText = life > 0 && (<div className="jk-tweet"> <span>{jktweet}</span> </div>);
+        const tweetText = life > 0 ? (<div className="jk-tweet"> <span>{jktweet}</span> </div>) : (<div className="text-ko">{name} is K.O ! <br/> Refresh to play again.</div>);
 
         // When K.O, JK disapear Animation
         const image = life > 0 ? (<img width="230px" src={jkrowling} alt="jkrowling" />)
             : (<img className="ko-animation-origin ko-animation" width="230px" src={jkrowling} alt="jkrowling" />);
 
         return (
-            <div className="col d-flex flex-column align-items-center">
-                <h1 id="h1-terfs">Terfs</h1>
-                {/* Vagina-Penis.gif (when JK Rowling is attacking) : */}
-                <img id="vagina-id" className={this.state.vaginaOnOff} src={vagina} alt="vagina" />
+            <div className="col d-flex flex-column row-jk">
 
-                {image}
-                <div className="buttons-jk">
-                {button}
-                {helpSteven}
+                <div className="col d-flex flex-column align-items-center">
+                    <h1 id="h1-terfs">Terfs</h1>
+                    {/* Vagina-Penis.gif (when JK Rowling is attacking) : */}
+                    <img id="vagina-id" className={this.state.vaginaOnOff} src={vagina} alt="vagina" />
+
+                    {image}
+                    <div className="buttons-jk">
+                        {button}
+                        {helpSteven}
+                    </div>
                 </div>
 
+                <div className="progress" style={{ height: "20px" }}>
+                    {lifeBarProgress}
+                </div>
 
-                <table className="table table-striped">
-                    <thead>
-                        <tr>
-                            <th scope="col">Hits</th>
-                            <th scope="col">Life</th>
-                        </tr>
-                    </thead>
-
-                    <tbody>
-                        <tr>
-                            <td>{hocState.hits}</td>
-                            {lifeValue}
-                        </tr>
-                    </tbody>
-                </table>
-
-                {tweetText}
-
+                <div className="col d-flex flex-column align-items-center mt-3 ">
+                    {tweetText}
+                </div>
             </div>
         )
     }
 }
 
-export default countHits(JkRowling);
+export default JkRowling;
 
