@@ -4,7 +4,7 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/05fe1f58-a122-4944-978a-5fd4d0d26295/deploy-status)](https://app.netlify.com/sites/terfsvspikachu/deploys)
 
 ***Click on this image to access :***
-[![Terfsvspikachu](https://github.com/ShayReichert/terfsvspikachu/blob/master/screen-pika-terfs.png)](https://terfsvspikachu.netlify.app/)
+[![Terfsvspikachu](https://github.com/ShayReichert/terfsvspikachu/blob/master/screen-pikaterfs.png)](https://terfsvspikachu.netlify.app/)
 
 
 ## Description
