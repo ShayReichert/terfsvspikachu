@@ -56,7 +56,7 @@ class JkRowling extends Component {
 
         // When K.O, JK disapear Animation
         const image = life > 0 ? (<img width="230px" src={jkrowling} alt="jkrowling" />)
-            : (<img className="ko-animation-origin ko-animation" width="230px" src={jkrowling} alt="jkrowling" />);
+            : (<img className="ko-animation-origin ko-animation" width="230px" src={jkrowling} alt="J.K Rowling (Harry Potter's author) on the left, smiling." />);
 
         return (
             <div className="col d-flex flex-column row-jk">

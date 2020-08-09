@@ -57,7 +57,7 @@ class Pikachu extends Component {
 
         // When K.O, Pikachu disapear Animation
         const image = life > 0 ? (<img width="230px" src={pikachu} alt="pikachu" />)
-            : (<img className="ko-animation-origin ko-animation" width="230px" src={pikachu} alt="pikachu" />);
+            : (<img className="ko-animation-origin ko-animation" width="230px" src={pikachu} alt="Pikachu on the right, pissed off, clenched fists." />);
 
 
         return (

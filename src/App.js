@@ -4,6 +4,9 @@ import Pikachu from './Components/Pikachu';
 import JkRowling from './Components/JkRowling';
 import jsonTweets from './Components/tweets.json';
 import Modal from './Components/Modal';
+import 'sanitize.css';
+import 'sanitize.css/forms.css';
+import 'sanitize.css/typography.css';
 
 
 class App extends Component {
