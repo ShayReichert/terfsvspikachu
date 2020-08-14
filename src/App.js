@@ -20,7 +20,7 @@ class App extends Component {
       pikachu: 100,
       jkrowling: 100,
       jkTweet: "Good evening Pikachu",
-      pikachuTweet: "Hi Johanne",
+      pikachuTweet: "Hi Johanne, I have some tweets for you...",
       isStephenKiller: false,
       showModal: true
     }
