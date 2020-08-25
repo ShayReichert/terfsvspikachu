@@ -248,10 +248,10 @@ footer {
 
 /* // (for XS / S screens) */
 @media only screen and (max-width: 800px) {
-    .app-div {
-        min-height: 200%;
+    /* .app-div {
+        min-height: 100%;
         overflow: scroll;
-    }
+    } */
     /* pikachu under jkrowling */
     .pikajk {
         display: flex;
