@@ -249,7 +249,9 @@ footer {
 /* // (for XS / S screens) */
 @media only screen and (max-device-width: 800px) {
     /* pikachu under jkrowling */
-    
+    body {
+        min-height: 800px;
+    }
     .pikajk {
         display: flex;
         flex-direction: column;
