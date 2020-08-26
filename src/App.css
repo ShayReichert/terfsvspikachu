@@ -211,7 +211,7 @@ footer {
 /* // MEDIA QUERIES */
 /* // (for xxl screens) */
 
-@media only screen and (min-width: 1400px) {
+@media screen and (min-width: 1400px) {
     .app-div {
         max-width: 1280px;
     }
@@ -247,11 +247,7 @@ footer {
 }
 
 /* // (for XS / S screens) */
-@media only screen and (max-width: 800px) {
-    /* .app-div {
-        min-height: 100%;
-        overflow: scroll;
-    } */
+@media screen and (max-width: 800px) {
     /* pikachu under jkrowling */
     .pikajk {
         display: flex;
