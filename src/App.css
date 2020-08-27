@@ -245,6 +245,34 @@ footer {
     }
 }
 
+/* // (for XS / S screens) test2 */
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 480px) {
+    .jk-tweet,
+    .pika-tweet {
+        width: 40%;
+    }
+    .pikajk {
+        display: flex;
+        flex-direction: column;
+    }
+    .row-pika {
+        margin-top: 20px;
+    }
+    /* //GIF POSITION */
+    #lightning-id {
+        width: 40%;
+        left: 70px;
+        top: 200px;
+    }
+    #vagina-id {
+        width: 40%;
+        right: 100px;
+        top: 300px;
+    }
+}
+
 /* // (for XS / S screens) */
 @media only screen and (max-device-width: 800px) {
     /* pikachu under jkrowling */
